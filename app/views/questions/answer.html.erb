@@ -1,0 +1,22 @@
+<h1>Stupid Coaching</h1>
+<blockquote>
+  <p>
+    <%= @question %>
+  </p>
+  <cite>You</cite>
+</blockquote>
+
+<blockquote class="coach">
+  <p>
+    <% if @question == "I am going to work" %>
+      <%= "Great!" %>
+    <% elsif @question.end_with?("?") %>
+      <%= "Silly question, get dressed and go to work!" %>
+    <% else %> 
+      <%= "I don't care, get dressed and go to work!" %>
+    <% end %>
+  </p>
+  <cite>Your coach</cite>
+</blockquote>
+  <%= link_to "Ask a new question", ask_path %>
+</div>
